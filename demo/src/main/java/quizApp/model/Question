@@ -1,0 +1,97 @@
+package codinpad.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "questions")
+public class Question {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public Integer id;
+  public String questionTitle;
+  public String Option1;
+  public String Option2;
+  public String Option3;
+  public String Option4;
+  public String rightAnswer;
+  public String difficultyLevel;
+  public String category;
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getQuestionTitle() {
+    return questionTitle;
+  }
+
+  public void setQuestionTitle(String questionTitle) {
+    this.questionTitle = questionTitle;
+  }
+
+  public String getOption1() {
+    return Option1;
+  }
+
+  public void setOption1(String option1) {
+    this.Option1 = option1;
+  }
+
+  public String getOption2() {
+    return Option2;
+  }
+
+  public void setOption2(String option2) {
+    this.Option2 = option2;
+  }
+
+  public String getOption3() {
+    return Option3;
+  }
+
+  public void setOption3(String option3) {
+    this.Option3 = option3;
+  }
+
+  public String getOption4() {
+    return Option4;
+  }
+
+  public void setOption4(String option4) {
+    this.Option4 = option4;
+  }
+
+  public String getRightAnswer() {
+    return rightAnswer;
+  }
+
+  public void setRightAnswer(String rightAnswer) {
+    this.rightAnswer = rightAnswer;
+  }
+
+  public String getCategory() {
+    return category;
+  }
+
+  public void setCategory(String category) {
+    this.category = category;
+  }
+
+  public String getDifficultyLevel() {
+    return difficultyLevel;
+  }
+
+  public void setDifficultyLevel(String difficultyLevel) {
+    this.difficultyLevel = difficultyLevel;
+  }
+}
